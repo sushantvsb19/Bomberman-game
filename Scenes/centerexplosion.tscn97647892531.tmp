@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://dnj287rdfvwoy"]
+
+[ext_resource type="Script" uid="uid://b2i3jg4ffmmot" path="res://scripts/centerexplosion.gd" id="1_fh1fh"]
+[ext_resource type="Texture2D" uid="uid://bv3od7dxw6lut" path="res://Assets/Sprites.png" id="1_hci76"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fh1fh"]
+atlas = ExtResource("1_hci76")
+region = Rect2(32, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5adat"]
+atlas = ExtResource("1_hci76")
+region = Rect2(112, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0cwm"]
+atlas = ExtResource("1_hci76")
+region = Rect2(32, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12s1g"]
+atlas = ExtResource("1_hci76")
+region = Rect2(112, 176, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eioem"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fh1fh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5adat")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0cwm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12s1g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3vj0"]
+size = Vector2(16, 16)
+
+[node name="centerexplosion" type="Area2D"]
+script = ExtResource("1_fh1fh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_eioem")
+autoplay = "default"
+frame = 1
+frame_progress = 0.0105835
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_c3vj0")
+
+[node name="Raycasts" type="Node2D" parent="."]
+
+[node name="RayCastUp" type="RayCast2D" parent="Raycasts"]
+target_position = Vector2(0, -16)
+
+[node name="RayCastright" type="RayCast2D" parent="Raycasts"]
+target_position = Vector2(16, 0)
+
+[node name="RayCastdown" type="RayCast2D" parent="Raycasts"]
+target_position = Vector2(0, 16)
+
+[node name="RayCastleft" type="RayCast2D" parent="Raycasts"]
+target_position = Vector2(-16, 0)

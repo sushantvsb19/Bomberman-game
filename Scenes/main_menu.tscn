@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://f4q02wi1nhjd"]
+
+[ext_resource type="Script" uid="uid://bsmhxbq324fn3" path="res://scripts/main_menu.gd" id="1_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://hsi47jjgrgxi" path="res://Assets/Space_Background3.png" id="1_28flt"]
+[ext_resource type="FontFile" uid="uid://dw3kjb1lwmaxv" path="res://Assets/PIXBOB MINI LITE.otf" id="2_48xlc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1ehe0"]
+paragraph_spacing = 3.0
+font = ExtResource("2_48xlc")
+font_size = 200
+font_color = Color(0.905882, 0.513726, 0.270588, 1)
+outline_size = 15
+outline_color = Color(0.568627, 0.678431, 0.403922, 1)
+shadow_size = 5
+shadow_color = Color(0.247059, 0.0196078, 0.14902, 0.988235)
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1ehe0")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = -72.0
+offset_right = 1161.0
+offset_bottom = 582.0
+texture = ExtResource("1_28flt")
+expand_mode = 2
+stretch_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 18.0
+offset_right = 1153.0
+offset_bottom = 293.0
+
+[node name="Gamename" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Bomberman"
+label_settings = SubResource("LabelSettings_1ehe0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -568.0
+offset_top = -334.0
+offset_right = 573.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 0
+
+[node name="StartButton" type="MenuButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 65
+text = "Start"
+switch_on_hover = true
+
+[node name="Exit" type="MenuButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 65
+text = "EXIT"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

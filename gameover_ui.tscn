@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjcbu6h00yg0u"]
+
+[ext_resource type="FontFile" uid="uid://dw3kjb1lwmaxv" path="res://Assets/PIXBOB MINI LITE.otf" id="1_617x4"]
+[ext_resource type="Script" uid="uid://cwlc423asd8sf" path="res://scripts/gameover_ui.gd" id="1_mgta4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mgta4"]
+font = ExtResource("1_617x4")
+font_size = 150
+font_color = Color(0.027451, 0.027451, 0.0431373, 1)
+outline_size = 12
+
+[node name="GameoverUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mgta4")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -6.0
+offset_right = -4.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Game Over"
+label_settings = SubResource("LabelSettings_mgta4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 418.0
+offset_right = 2.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Restart" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_617x4")
+theme_override_font_sizes/font_size = 40
+text = "Restart"
+
+[node name="Back to main menu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_617x4")
+theme_override_font_sizes/font_size = 40
+text = "main menu"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_617x4")
+theme_override_font_sizes/font_size = 40
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="VBoxContainer/Back to main menu" to="." method="_on_back_to_main_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

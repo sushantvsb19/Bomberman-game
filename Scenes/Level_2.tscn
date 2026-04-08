@@ -1,0 +1,413 @@
+[gd_scene load_steps=10 format=4 uid="uid://bqf16bovhaiw8"]
+
+[ext_resource type="PackedScene" uid="uid://bjcbu6h00yg0u" path="res://gameover_ui.tscn" id="1_ostk4"]
+[ext_resource type="PackedScene" uid="uid://bu14nd4ecjc57" path="res://Scenes/enemyballoon.tscn" id="1_vgr4u"]
+[ext_resource type="PackedScene" uid="uid://d1gv1m7kkgjnr" path="res://Scenes/brickwall.tscn" id="4_apq5t"]
+[ext_resource type="Resource" uid="uid://x66cpdxelwcr" path="res://Resource/door_transition.tres" id="4_cleky"]
+[ext_resource type="PackedScene" uid="uid://bkt28v71ly7yv" path="res://Scenes/player.tscn" id="6_2g134"]
+[ext_resource type="Texture2D" uid="uid://bv3od7dxw6lut" path="res://Assets/Sprites.png" id="6_4ge3q"]
+[ext_resource type="PackedScene" uid="uid://dbd1d0k36m6v" path="res://Scenes/enemyblue_1.tscn" id="6_cleky"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2g134"]
+texture = ExtResource("6_4ge3q")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+2:4/0 = 0
+7:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+2:5/0 = 0
+7:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+2:7/0 = 0
+7:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+2:8/0 = 0
+7:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+2:9/0 = 0
+7:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+2:10/0 = 0
+7:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+2:12/0 = 0
+7:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+2:13/0 = 0
+7:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+12:13/0 = 0
+13:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+12:14/0 = 0
+13:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+6:15/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+10:15/0 = 0
+0:16/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+3:16/0 = 0
+4:16/0 = 0
+5:16/0 = 0
+6:16/0 = 0
+8:16/0 = 0
+9:16/0 = 0
+10:16/0 = 0
+0:17/0 = 0
+1:17/0 = 0
+2:17/0 = 0
+3:17/0 = 0
+4:17/0 = 0
+5:17/0 = 0
+6:17/0 = 0
+7:17/0 = 0
+8:17/0 = 0
+9:17/0 = 0
+10:17/0 = 0
+0:18/0 = 0
+1:18/0 = 0
+2:18/0 = 0
+3:18/0 = 0
+4:18/0 = 0
+5:18/0 = 0
+6:18/0 = 0
+7:18/0 = 0
+8:18/0 = 0
+9:18/0 = 0
+10:18/0 = 0
+0:19/0 = 0
+1:19/0 = 0
+2:19/0 = 0
+3:19/0 = 0
+4:19/0 = 0
+5:19/0 = 0
+6:19/0 = 0
+0:20/0 = 0
+1:20/0 = 0
+2:20/0 = 0
+3:20/0 = 0
+4:20/0 = 0
+5:20/0 = 0
+6:20/0 = 0
+0:21/0 = 0
+1:21/0 = 0
+2:21/0 = 0
+3:21/0 = 0
+4:21/0 = 0
+5:21/0 = 0
+6:21/0 = 0
+7:21/0 = 0
+8:21/0 = 0
+9:21/0 = 0
+0:22/0 = 0
+1:22/0 = 0
+2:22/0 = 0
+3:22/0 = 0
+6:22/0 = 0
+7:22/0 = 0
+8:22/0 = 0
+9:22/0 = 0
+11:22/0 = 0
+12:22/0 = 0
+13:22/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_cleky"]
+physics_layer_0/collision_layer = 2
+sources/0 = SubResource("TileSetAtlasSource_2g134")
+
+[node name="Level_2" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GameoverUI" parent="CanvasLayer" instance=ExtResource("1_ostk4")]
+
+[node name="enemyballoon6" parent="." instance=ExtResource("1_vgr4u")]
+position = Vector2(272, 81)
+
+[node name="enemyballoon7" parent="." instance=ExtResource("1_vgr4u")]
+position = Vector2(352, 176)
+
+[node name="enemyballoon8" parent="." instance=ExtResource("1_vgr4u")]
+position = Vector2(304, 209)
+
+[node name="enemyballoon2" parent="." instance=ExtResource("1_vgr4u")]
+position = Vector2(111, 161)
+
+[node name="enemyballoon5" parent="." instance=ExtResource("1_vgr4u")]
+position = Vector2(48, 211)
+
+[node name="brickwall" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(160, 80)
+
+[node name="brickwall17" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(240, 128)
+
+[node name="brickwall25" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(128, 176)
+
+[node name="brickwall26" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(400, 128)
+
+[node name="brickwall27" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(304, 240)
+
+[node name="brickwall28" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(336, 224)
+
+[node name="brickwall29" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(192, 240)
+
+[node name="brickwall30" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(96, 240)
+
+[node name="brickwall31" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(320, 240)
+
+[node name="brickwall32" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(384, 176)
+
+[node name="brickwall33" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(240, 144)
+
+[node name="brickwall34" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(384, 80)
+
+[node name="brickwall37" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(320, 144)
+
+[node name="brickwall38" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(176, 112)
+
+[node name="brickwall35" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(288, 208)
+
+[node name="brickwall36" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(48, 240)
+
+[node name="brickwall39" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(160, 112)
+
+[node name="brickwall40" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(64, 144)
+
+[node name="brickwall41" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(48, 144)
+
+[node name="brickwall18" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(288, 80)
+
+[node name="brickwall19" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(48, 192)
+
+[node name="brickwall20" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(240, 96)
+
+[node name="brickwall21" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(112, 80)
+door_transition_resource = ExtResource("4_cleky")
+
+[node name="brickwall22" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(208, 128)
+
+[node name="brickwall23" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(320, 80)
+
+[node name="brickwall24" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(368, 176)
+
+[node name="brickwall2" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(224, 208)
+
+[node name="brickwall3" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(208, 192)
+
+[node name="brickwall4" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(48, 160)
+
+[node name="brickwall5" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(112, 144)
+
+[node name="brickwall6" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(240, 160)
+
+[node name="brickwall7" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(80, 240)
+
+[node name="brickwall8" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(400, 80)
+
+[node name="brickwall9" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(400, 224)
+
+[node name="brickwall10" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(400, 240)
+
+[node name="brickwall11" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(368, 160)
+
+[node name="brickwall12" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(368, 128)
+
+[node name="brickwall13" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(240, 80)
+
+[node name="brickwall14" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(48, 96)
+
+[node name="brickwall15" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(112, 128)
+
+[node name="brickwall16" parent="." instance=ExtResource("4_apq5t")]
+position = Vector2(224, 80)
+
+[node name="enemyblue2" parent="." instance=ExtResource("6_cleky")]
+position = Vector2(272, 237)
+
+[node name="enemyblue6" parent="." instance=ExtResource("6_cleky")]
+position = Vector2(175, 236)
+
+[node name="enemyblue3" parent="." instance=ExtResource("6_cleky")]
+position = Vector2(369, 238)
+
+[node name="enemyblue4" parent="." instance=ExtResource("6_cleky")]
+position = Vector2(143, 140)
+
+[node name="enemyblue5" parent="." instance=ExtResource("6_cleky")]
+position = Vector2(400, 112)
+
+[node name="tilemaplayer2" type="TileMapLayer" parent="." groups=["tilemaps"]]
+position = Vector2(-8, -8)
+tile_map_data = PackedByteArray("AAAZAAQAAAADAAMAAAAYAAQAAAADAAMAAAAXAAQAAAADAAMAAAAWAAQAAAADAAMAAAAVAAQAAAADAAMAAAAUAAQAAAADAAMAAAATAAQAAAADAAMAAAASAAQAAAADAAMAAAARAAQAAAADAAMAAAAQAAQAAAADAAMAAAAPAAQAAAADAAMAAAAOAAQAAAADAAMAAAANAAQAAAADAAMAAAAMAAQAAAADAAMAAAALAAQAAAADAAMAAAAKAAQAAAADAAMAAAAJAAQAAAADAAMAAAAIAAQAAAADAAMAAAAHAAQAAAADAAMAAAAGAAQAAAADAAMAAAAFAAQAAAADAAMAAAAEAAQAAAADAAMAAAADAAQAAAADAAMAAAACAAQAAAADAAMAAAAaAAQAAAADAAMAAAAaAAUAAAADAAMAAAAaAAYAAAADAAMAAAAaAAcAAAADAAMAAAAaAAgAAAADAAMAAAAaAAkAAAADAAMAAAAaAAoAAAADAAMAAAAaAAsAAAADAAMAAAAaAAwAAAADAAMAAAAaAA0AAAADAAMAAAAaAA4AAAADAAMAAAAaAA8AAAADAAMAAAAaABAAAAADAAMAAAAZABAAAAADAAMAAAAYABAAAAADAAMAAAAXABAAAAADAAMAAAAWABAAAAADAAMAAAAVABAAAAADAAMAAAAUABAAAAADAAMAAAATABAAAAADAAMAAAASABAAAAADAAMAAAARABAAAAADAAMAAAAQABAAAAADAAMAAAAPABAAAAADAAMAAAAOABAAAAADAAMAAAANABAAAAADAAMAAAAMABAAAAADAAMAAAALABAAAAADAAMAAAAKABAAAAADAAMAAAAJABAAAAADAAMAAAAIABAAAAADAAMAAAAHABAAAAADAAMAAAAGABAAAAADAAMAAAAFABAAAAADAAMAAAAEABAAAAADAAMAAAADABAAAAADAAMAAAACABAAAAADAAMAAAACAAUAAAADAAMAAAACAAYAAAADAAMAAAACAAcAAAADAAMAAAACAAgAAAADAAMAAAACAAkAAAADAAMAAAACAAoAAAADAAMAAAACAAsAAAADAAMAAAACAAwAAAADAAMAAAACAA0AAAADAAMAAAACAA4AAAADAAMAAAACAA8AAAADAAMAAAAEAAYAAAADAAMAAAAEAAgAAAADAAMAAAAEAAoAAAADAAMAAAAEAAwAAAADAAMAAAAEAA4AAAADAAMAAAAGAAYAAAADAAMAAAAGAAgAAAADAAMAAAAGAAoAAAADAAMAAAAGAAwAAAADAAMAAAAGAA4AAAADAAMAAAAIAAYAAAADAAMAAAAIAAgAAAADAAMAAAAIAAoAAAADAAMAAAAIAAwAAAADAAMAAAAIAA4AAAADAAMAAAAKAAYAAAADAAMAAAAKAAgAAAADAAMAAAAKAAoAAAADAAMAAAAKAAwAAAADAAMAAAAKAA4AAAADAAMAAAAMAAYAAAADAAMAAAAMAAgAAAADAAMAAAAMAAoAAAADAAMAAAAMAAwAAAADAAMAAAAMAA4AAAADAAMAAAAOAAYAAAADAAMAAAAOAAgAAAADAAMAAAAOAAoAAAADAAMAAAAOAAwAAAADAAMAAAAOAA4AAAADAAMAAAAQAAYAAAADAAMAAAAQAAgAAAADAAMAAAAQAAoAAAADAAMAAAAQAAwAAAADAAMAAAAQAA4AAAADAAMAAAASAAYAAAADAAMAAAASAAgAAAADAAMAAAASAAoAAAADAAMAAAASAAwAAAADAAMAAAASAA4AAAADAAMAAAAUAAYAAAADAAMAAAAUAAgAAAADAAMAAAAUAAoAAAADAAMAAAAUAAwAAAADAAMAAAAUAA4AAAADAAMAAAAWAAYAAAADAAMAAAAWAAgAAAADAAMAAAAWAAoAAAADAAMAAAAWAAwAAAADAAMAAAAWAA4AAAADAAMAAAAYAAYAAAADAAMAAAAYAAgAAAADAAMAAAAYAAoAAAADAAMAAAAYAAwAAAADAAMAAAAYAA4AAAADAAMAAAA=")
+tile_set = SubResource("TileSet_cleky")
+
+[node name="Player" parent="tilemaplayer2" instance=ExtResource("6_2g134")]
+position = Vector2(89, 136)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(223, 159)
+zoom = Vector2(3, 3)

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Doortransitionresource" load_steps=3 format=3 uid="uid://x66cpdxelwcr"]
+
+[ext_resource type="Texture2D" uid="uid://ccwqq4fxtxi6s" path="res://Assets/door(1).png" id="1_3wh16"]
+[ext_resource type="Script" uid="uid://cmfpsobgoxf26" path="res://scripts/Doortransitionresource.gd" id="1_xwuay"]
+
+[resource]
+script = ExtResource("1_xwuay")
+door_transition = 0
+door_texture = ExtResource("1_3wh16")

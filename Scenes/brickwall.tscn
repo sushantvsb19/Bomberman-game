@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=3 uid="uid://d1gv1m7kkgjnr"]
+
+[ext_resource type="Texture2D" uid="uid://bv3od7dxw6lut" path="res://Assets/Sprites.png" id="1_83rs1"]
+[ext_resource type="Script" uid="uid://d3ynw5p6b50vr" path="res://scripts/brickwall.gd" id="1_ri4yp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83rs1"]
+atlas = ExtResource("1_83rs1")
+region = Rect2(64, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ri4yp"]
+atlas = ExtResource("1_83rs1")
+region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4eqj"]
+atlas = ExtResource("1_83rs1")
+region = Rect2(96, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1i3f"]
+atlas = ExtResource("1_83rs1")
+region = Rect2(112, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqgbe"]
+atlas = ExtResource("1_83rs1")
+region = Rect2(128, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdntd"]
+atlas = ExtResource("1_83rs1")
+region = Rect2(144, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdtc1"]
+atlas = ExtResource("1_83rs1")
+region = Rect2(160, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d424n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83rs1")
+}],
+"loop": false,
+"name": &"Base",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ri4yp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4eqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1i3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqgbe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdntd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdtc1")
+}],
+"loop": false,
+"name": &"Destruction",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r0cxa"]
+size = Vector2(16, 16)
+
+[node name="brickwall" type="Area2D"]
+collision_layer = 4
+collision_mask = 33
+script = ExtResource("1_ri4yp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_d424n")
+animation = &"Destruction"
+autoplay = "Base"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_r0cxa")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
